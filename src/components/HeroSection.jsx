@@ -4,36 +4,36 @@ import { gsap } from "gsap";
 const HeroSection = () => {
     useEffect(() => {
         // Hero animation
-        const tl = gsap.timeline({ delay: 0.5 });
+        const tl = gsap.timeline({ delay: 0.2 });
 
         tl.fromTo(
             ".hero-title",
-            { y: 100, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
+            { y: 60, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.7, ease: "power3.out" }
         )
             .fromTo(
                 ".hero-subtitle",
-                { y: 50, opacity: 0 },
-                { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
-                "-=0.5"
+                { y: 40, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" },
+                "-=0.4"
             )
             .fromTo(
                 ".hero-buttons",
                 { y: 30, opacity: 0 },
-                { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
+                { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
                 "-=0.3"
             )
             .fromTo(
                 ".hero-rating",
                 { y: 20, opacity: 0 },
-                { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
+                { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
                 "-=0.2"
             )
             .fromTo(
                 ".hero-image",
-                { x: 100, opacity: 0 },
-                { x: 0, opacity: 1, duration: 1, ease: "power2.out" },
-                "-=0.8"
+                { x: 80, opacity: 0 },
+                { x: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
+                "-=0.6"
             );
     }, []);
 

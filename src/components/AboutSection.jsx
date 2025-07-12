@@ -9,15 +9,15 @@ const AboutSection = () => {
         // About section animations
         gsap.fromTo(
             ".about-title",
-            { y: 50, opacity: 0 },
+            { y: 40, opacity: 0 },
             {
                 y: 0,
                 opacity: 1,
-                duration: 1,
-                ease: "power2.out",
+                duration: 0.6,
+                ease: "power3.out",
                 scrollTrigger: {
                     trigger: ".about-title",
-                    start: "top 80%",
+                    start: "top 85%",
                 },
             }
         );
@@ -28,26 +28,26 @@ const AboutSection = () => {
             {
                 y: 0,
                 opacity: 1,
-                duration: 0.8,
-                ease: "power2.out",
+                duration: 0.5,
+                ease: "power3.out",
                 scrollTrigger: {
                     trigger: ".about-content",
-                    start: "top 80%",
+                    start: "top 85%",
                 },
             }
         );
 
         gsap.fromTo(
             ".about-image",
-            { x: -50, opacity: 0 },
+            { x: -40, opacity: 0 },
             {
                 x: 0,
                 opacity: 1,
-                duration: 1,
-                ease: "power2.out",
+                duration: 0.7,
+                ease: "power3.out",
                 scrollTrigger: {
                     trigger: ".about-image",
-                    start: "top 80%",
+                    start: "top 85%",
                 },
             }
         );
@@ -58,12 +58,12 @@ const AboutSection = () => {
             {
                 y: 0,
                 opacity: 1,
-                duration: 0.6,
-                ease: "power2.out",
-                stagger: 0.1,
+                duration: 0.4,
+                ease: "power3.out",
+                stagger: 0.08,
                 scrollTrigger: {
                     trigger: ".features-grid",
-                    start: "top 80%",
+                    start: "top 85%",
                 },
             }
         );
@@ -74,12 +74,12 @@ const AboutSection = () => {
             {
                 scale: 1,
                 opacity: 1,
-                duration: 0.6,
-                ease: "back.out(1.7)",
-                stagger: 0.1,
+                duration: 0.5,
+                ease: "back.out(1.4)",
+                stagger: 0.08,
                 scrollTrigger: {
                     trigger: ".stats-grid",
-                    start: "top 80%",
+                    start: "top 85%",
                 },
             }
         );

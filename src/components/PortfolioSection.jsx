@@ -87,15 +87,15 @@ const PortfolioSection = () => {
         // Portfolio section animations
         gsap.fromTo(
             ".portfolio-title",
-            { y: 50, opacity: 0 },
+            { y: 40, opacity: 0 },
             {
                 y: 0,
                 opacity: 1,
-                duration: 1,
-                ease: "power2.out",
+                duration: 0.6,
+                ease: "power3.out",
                 scrollTrigger: {
                     trigger: ".portfolio-title",
-                    start: "top 80%",
+                    start: "top 85%",
                 },
             }
         );
@@ -106,28 +106,28 @@ const PortfolioSection = () => {
             {
                 y: 0,
                 opacity: 1,
-                duration: 0.6,
-                ease: "power2.out",
-                stagger: 0.1,
+                duration: 0.4,
+                ease: "power3.out",
+                stagger: 0.06,
                 scrollTrigger: {
                     trigger: ".portfolio-filters",
-                    start: "top 80%",
+                    start: "top 85%",
                 },
             }
         );
 
         gsap.fromTo(
             ".project-card",
-            { y: 50, opacity: 0 },
+            { y: 40, opacity: 0 },
             {
                 y: 0,
                 opacity: 1,
-                duration: 0.8,
-                ease: "power2.out",
-                stagger: 0.2,
+                duration: 0.6,
+                ease: "power3.out",
+                stagger: 0.1,
                 scrollTrigger: {
                     trigger: ".projects-grid",
-                    start: "top 80%",
+                    start: "top 85%",
                 },
             }
         );

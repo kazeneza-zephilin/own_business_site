@@ -46,15 +46,15 @@ const FAQSection = () => {
         // FAQ section animations
         gsap.fromTo(
             ".faq-title",
-            { y: 50, opacity: 0 },
+            { y: 40, opacity: 0 },
             {
                 y: 0,
                 opacity: 1,
-                duration: 1,
-                ease: "power2.out",
+                duration: 0.6,
+                ease: "power3.out",
                 scrollTrigger: {
                     trigger: ".faq-title",
-                    start: "top 80%",
+                    start: "top 85%",
                 },
             }
         );
@@ -65,12 +65,12 @@ const FAQSection = () => {
             {
                 y: 0,
                 opacity: 1,
-                duration: 0.6,
-                ease: "power2.out",
-                stagger: 0.1,
+                duration: 0.4,
+                ease: "power3.out",
+                stagger: 0.06,
                 scrollTrigger: {
                     trigger: ".faq-list",
-                    start: "top 80%",
+                    start: "top 85%",
                 },
             }
         );
@@ -81,11 +81,11 @@ const FAQSection = () => {
             {
                 y: 0,
                 opacity: 1,
-                duration: 0.8,
-                ease: "power2.out",
+                duration: 0.6,
+                ease: "power3.out",
                 scrollTrigger: {
                     trigger: ".faq-cta",
-                    start: "top 80%",
+                    start: "top 85%",
                 },
             }
         );

@@ -74,15 +74,15 @@ const ServicesSection = () => {
         // Services section animations
         gsap.fromTo(
             ".services-title",
-            { y: 50, opacity: 0 },
+            { y: 40, opacity: 0 },
             {
                 y: 0,
                 opacity: 1,
-                duration: 1,
-                ease: "power2.out",
+                duration: 0.6,
+                ease: "power3.out",
                 scrollTrigger: {
                     trigger: ".services-title",
-                    start: "top 80%",
+                    start: "top 85%",
                 },
             }
         );
@@ -93,42 +93,42 @@ const ServicesSection = () => {
             {
                 y: 0,
                 opacity: 1,
-                duration: 0.6,
-                ease: "power2.out",
-                stagger: 0.1,
+                duration: 0.4,
+                ease: "power3.out",
+                stagger: 0.06,
                 scrollTrigger: {
                     trigger: ".services-tabs",
-                    start: "top 80%",
+                    start: "top 85%",
                 },
             }
         );
 
         gsap.fromTo(
             ".service-content",
-            { x: 50, opacity: 0 },
+            { x: 40, opacity: 0 },
             {
                 x: 0,
                 opacity: 1,
-                duration: 0.8,
-                ease: "power2.out",
+                duration: 0.6,
+                ease: "power3.out",
                 scrollTrigger: {
                     trigger: ".service-content",
-                    start: "top 80%",
+                    start: "top 85%",
                 },
             }
         );
 
         gsap.fromTo(
             ".service-image",
-            { x: -50, opacity: 0 },
+            { x: -40, opacity: 0 },
             {
                 x: 0,
                 opacity: 1,
-                duration: 0.8,
-                ease: "power2.out",
+                duration: 0.6,
+                ease: "power3.out",
                 scrollTrigger: {
                     trigger: ".service-image",
-                    start: "top 80%",
+                    start: "top 85%",
                 },
             }
         );

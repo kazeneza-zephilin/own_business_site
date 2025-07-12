@@ -18,7 +18,7 @@ const Navbar = () => {
         gsap.fromTo(
             ".navbar",
             { y: -100, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
+            { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }
         );
     }, []);
 
@@ -31,7 +31,7 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`navbar fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+            className={`navbar fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
                 isScrolled
                     ? "bg-white/95 backdrop-blur-sm shadow-lg"
                     : "bg-transparent"
@@ -47,52 +47,50 @@ const Navbar = () => {
                     </div>
 
                     {/* Navigation Links */}
-                    <div className="hidden md:block">
-                        <div className="ml-10 flex items-baseline space-x-8">
-                            <button
-                                onClick={() => scrollToSection("home")}
-                                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
-                            >
-                                Home
-                            </button>
-                            <button
-                                onClick={() => scrollToSection("about")}
-                                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
-                            >
-                                About
-                            </button>
-                            <button
-                                onClick={() => scrollToSection("services")}
-                                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
-                            >
-                                Services
-                            </button>
-                            <button
-                                onClick={() => scrollToSection("portfolio")}
-                                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
-                            >
-                                Portfolio
-                            </button>
-                            <button
-                                onClick={() => scrollToSection("faq")}
-                                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
-                            >
-                                FAQ
-                            </button>
-                            <button
-                                onClick={() => scrollToSection("contact")}
-                                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
-                            >
-                                Contact
-                            </button>
-                        </div>
+                    <div className="hidden md:block">                            <div className="ml-10 flex items-baseline space-x-8">
+                                <button
+                                    onClick={() => scrollToSection("home")}
+                                    className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                                >
+                                    Home
+                                </button>
+                                <button
+                                    onClick={() => scrollToSection("about")}
+                                    className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                                >
+                                    About
+                                </button>
+                                <button
+                                    onClick={() => scrollToSection("services")}
+                                    className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                                >
+                                    Services
+                                </button>
+                                <button
+                                    onClick={() => scrollToSection("portfolio")}
+                                    className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                                >
+                                    Portfolio
+                                </button>
+                                <button
+                                    onClick={() => scrollToSection("faq")}
+                                    className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                                >
+                                    FAQ
+                                </button>
+                                <button
+                                    onClick={() => scrollToSection("contact")}
+                                    className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                                >
+                                    Contact
+                                </button>
+                            </div>
                     </div>
 
                     {/* Get Started Button */}
                     <div className="hidden md:block">
                         <button
-                            onClick={() => scrollToSection("contact")}
-                            className="bg-gray-900 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+                            onClick={() => scrollToSection("contact")}                                className="bg-gray-900 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors duration-200"
                         >
                             Get Started
                         </button>

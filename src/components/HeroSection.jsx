@@ -156,12 +156,18 @@ const HeroSection = () => {
 
                     {/* Right Image */}
                     <div className="hero-image relative">
-                        <div className="relative h-96 lg:h-[500px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-2xl">
-                            {/* Placeholder for the staircase image */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-amber-200 via-yellow-400 to-orange-500 opacity-90"></div>
+                        <div className="relative h-96 lg:h-[500px] bg-white rounded-2xl overflow-hidden shadow-2xl">
+                            {/* Dashboard Image */}
+                            <img
+                                src="/images/data-dashboard.jpg"
+                                alt="Analytics Dashboard Interface"
+                                className="w-full h-full object-cover"
+                            />
+                            {/* Overlay for better text contrast */}
+                            <div className="absolute inset-0 bg-black/20"></div>
                             <div className="absolute inset-0 flex items-end justify-center p-8">
-                                <div className="w-full h-32 bg-black/20 rounded-lg backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                                    <div className="text-white/80 text-center">
+                                <div className="w-full h-32 bg-black/40 rounded-lg backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                                    <div className="text-white text-center">
                                         <div className="w-16 h-16 mx-auto mb-2 bg-white/20 rounded-lg flex items-center justify-center">
                                             <svg
                                                 className="w-8 h-8"
@@ -172,7 +178,7 @@ const HeroSection = () => {
                                             </svg>
                                         </div>
                                         <p className="text-sm font-medium">
-                                            Premium Architecture
+                                            Real Dashboard Preview
                                         </p>
                                     </div>
                                 </div>

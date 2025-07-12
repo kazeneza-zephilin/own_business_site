@@ -47,50 +47,53 @@ const Navbar = () => {
                     </div>
 
                     {/* Navigation Links */}
-                    <div className="hidden md:block">                            <div className="ml-10 flex items-baseline space-x-8">
-                                <button
-                                    onClick={() => scrollToSection("home")}
-                                    className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
-                                >
-                                    Home
-                                </button>
-                                <button
-                                    onClick={() => scrollToSection("about")}
-                                    className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
-                                >
-                                    About
-                                </button>
-                                <button
-                                    onClick={() => scrollToSection("services")}
-                                    className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
-                                >
-                                    Services
-                                </button>
-                                <button
-                                    onClick={() => scrollToSection("portfolio")}
-                                    className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
-                                >
-                                    Portfolio
-                                </button>
-                                <button
-                                    onClick={() => scrollToSection("faq")}
-                                    className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
-                                >
-                                    FAQ
-                                </button>
-                                <button
-                                    onClick={() => scrollToSection("contact")}
-                                    className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
-                                >
-                                    Contact
-                                </button>
-                            </div>
+                    <div className="hidden md:block">
+                        {" "}
+                        <div className="ml-10 flex items-baseline space-x-8">
+                            <button
+                                onClick={() => scrollToSection("home")}
+                                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                            >
+                                Home
+                            </button>
+                            <button
+                                onClick={() => scrollToSection("about")}
+                                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                            >
+                                About
+                            </button>
+                            <button
+                                onClick={() => scrollToSection("services")}
+                                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                            >
+                                Services
+                            </button>
+                            <button
+                                onClick={() => scrollToSection("portfolio")}
+                                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                            >
+                                Portfolio
+                            </button>
+                            <button
+                                onClick={() => scrollToSection("faq")}
+                                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                            >
+                                FAQ
+                            </button>
+                            <button
+                                onClick={() => scrollToSection("contact")}
+                                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                            >
+                                Contact
+                            </button>
+                        </div>
                     </div>
 
                     {/* Get Started Button */}
                     <div className="hidden md:block">
                         <button
-                            onClick={() => scrollToSection("contact")}                                className="bg-gray-900 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors duration-200"
+                            onClick={() => scrollToSection("contact")}
+                            className="bg-gray-900 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors duration-200"
                         >
                             Get Started
                         </button>

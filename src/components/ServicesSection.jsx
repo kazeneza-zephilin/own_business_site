@@ -304,7 +304,7 @@ const ServicesSection = () => {
 
                     {/* Right Image */}
                     <div className="service-image relative">
-                        <div className="relative h-80 lg:h-96 bg-white rounded-2xl overflow-hidden shadow-xl">
+                        <div className="relative h-80 lg:h-96 bg-white rounded-2xl overflow-hidden shadow-xl mx-4 sm:mx-6 lg:mx-0">
                             {/* City/Infrastructure themed image placeholder */}
                             <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800"></div>
 

@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -101,23 +102,108 @@ const Navbar = () => {
 
                     {/* Mobile menu button */}
                     <div className="md:hidden">
-                        <button className="text-gray-700 hover:text-gray-900">
+                        <button
+                            onClick={() =>
+                                setIsMobileMenuOpen(!isMobileMenuOpen)
+                            }
+                            className="text-gray-700 hover:text-gray-900"
+                        >
                             <svg
                                 className="h-6 w-6"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
                             >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M4 6h16M4 12h16M4 18h16"
-                                />
+                                {isMobileMenuOpen ? (
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                ) : (
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M4 6h16M4 12h16M4 18h16"
+                                    />
+                                )}
                             </svg>
                         </button>
                     </div>
                 </div>
+
+                {/* Mobile Menu */}
+                {isMobileMenuOpen && (
+                    <div className="md:hidden">
+                        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+                            <button
+                                onClick={() => {
+                                    scrollToSection("home");
+                                    setIsMobileMenuOpen(false);
+                                }}
+                                className="block px-3 py-2 text-gray-700 hover:text-gray-900 text-base font-medium w-full text-left"
+                            >
+                                Home
+                            </button>
+                            <button
+                                onClick={() => {
+                                    scrollToSection("services");
+                                    setIsMobileMenuOpen(false);
+                                }}
+                                className="block px-3 py-2 text-gray-700 hover:text-gray-900 text-base font-medium w-full text-left"
+                            >
+                                Services
+                            </button>
+                            <button
+                                onClick={() => {
+                                    scrollToSection("portfolio");
+                                    setIsMobileMenuOpen(false);
+                                }}
+                                className="block px-3 py-2 text-gray-700 hover:text-gray-900 text-base font-medium w-full text-left"
+                            >
+                                Portfolio
+                            </button>
+                            <button
+                                onClick={() => {
+                                    scrollToSection("about-page");
+                                    setIsMobileMenuOpen(false);
+                                }}
+                                className="block px-3 py-2 text-gray-700 hover:text-gray-900 text-base font-medium w-full text-left"
+                            >
+                                About
+                            </button>
+                            <button
+                                onClick={() => {
+                                    scrollToSection("blog");
+                                    setIsMobileMenuOpen(false);
+                                }}
+                                className="block px-3 py-2 text-gray-700 hover:text-gray-900 text-base font-medium w-full text-left"
+                            >
+                                Blog
+                            </button>
+                            <button
+                                onClick={() => {
+                                    scrollToSection("contact");
+                                    setIsMobileMenuOpen(false);
+                                }}
+                                className="block px-3 py-2 text-gray-700 hover:text-gray-900 text-base font-medium w-full text-left"
+                            >
+                                Contact
+                            </button>
+                            <button
+                                onClick={() => {
+                                    scrollToSection("contact");
+                                    setIsMobileMenuOpen(false);
+                                }}
+                                className="block w-full mt-4 bg-gray-900 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors duration-200"
+                            >
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+                )}
             </div>
         </nav>
     );

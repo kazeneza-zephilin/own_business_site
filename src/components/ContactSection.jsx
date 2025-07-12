@@ -337,7 +337,7 @@ const ContactSection = () => {
 
                         {/* Map */}
                         <div className="contact-map">
-                            <div className="h-64 bg-gray-200 rounded-lg overflow-hidden">
+                            <div className="h-64 bg-gray-200 rounded-lg overflow-hidden mx-4 sm:mx-6 lg:mx-0">
                                 {/* Placeholder for Google Maps */}
                                 <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center relative">
                                     <div className="text-center">

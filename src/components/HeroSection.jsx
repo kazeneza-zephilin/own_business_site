@@ -156,7 +156,7 @@ const HeroSection = () => {
 
                     {/* Right Image */}
                     <div className="hero-image relative mt-8 lg:mt-0">
-                        <div className="relative h-96 lg:h-[500px] bg-white rounded-2xl overflow-hidden shadow-2xl mx-4 sm:mx-6 lg:mx-0">
+                        <div className="relative h-96 lg:h-[500px] bg-white rounded-2xl overflow-hidden shadow-2xl mx-4 sm:mx-6 lg:mx-8 xl:mx-12 2xl:mx-16">
                             {/* Dashboard Image */}
                             <img
                                 src="/images/data-dashboard.jpg"

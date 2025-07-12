@@ -106,7 +106,7 @@ const AboutSection = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
                     {/* Left Image */}
                     <div className="about-image relative">
-                        <div className="relative h-80 lg:h-96 bg-gray-100 rounded-2xl overflow-hidden mx-4 sm:mx-6 lg:mx-0">
+                        <div className="relative h-80 lg:h-96 bg-gray-100 rounded-2xl overflow-hidden mx-4 sm:mx-6 lg:mx-8 xl:mx-12 2xl:mx-16">
                             {/* Placeholder for laptop/workspace image */}
                             <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-100"></div>
                             <div className="absolute inset-0 flex items-center justify-center">

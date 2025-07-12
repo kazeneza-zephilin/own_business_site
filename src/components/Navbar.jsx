@@ -42,7 +42,7 @@ const Navbar = () => {
                     {/* Logo */}
                     <div className="flex items-center">
                         <div className="text-2xl font-bold text-gray-900">
-                            TechCraft
+                            DigitalDuo
                         </div>
                     </div>
 
@@ -57,12 +57,6 @@ const Navbar = () => {
                                 Home
                             </button>
                             <button
-                                onClick={() => scrollToSection("about")}
-                                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
-                            >
-                                About
-                            </button>
-                            <button
                                 onClick={() => scrollToSection("services")}
                                 className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
                             >
@@ -75,10 +69,16 @@ const Navbar = () => {
                                 Portfolio
                             </button>
                             <button
-                                onClick={() => scrollToSection("faq")}
+                                onClick={() => scrollToSection("about-page")}
                                 className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
                             >
-                                FAQ
+                                About
+                            </button>
+                            <button
+                                onClick={() => scrollToSection("blog")}
+                                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                            >
+                                Blog
                             </button>
                             <button
                                 onClick={() => scrollToSection("contact")}

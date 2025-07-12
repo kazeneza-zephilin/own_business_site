@@ -5,12 +5,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const ServicesSection = () => {
-    const [activeService, setActiveService] = useState("Website Development");
+    const [activeService, setActiveService] = useState(
+        "Website Design & Development"
+    );
 
     const services = [
         {
             id: "website",
-            title: "Website Development",
+            title: "Website Design & Development",
             icon: (isActive) => (
                 <svg
                     className={`w-5 h-5 ${
@@ -29,19 +31,20 @@ const ServicesSection = () => {
                 </svg>
             ),
             description:
-                "Custom-built websites that are fast, responsive, and optimized for search engines.",
+                "Custom websites and web applications built with modern technologies. From landing pages to complex e-commerce platforms.",
             features: [
-                "Business websites",
-                "Landing pages",
-                "SEO optimization",
+                "Responsive web design",
                 "E-commerce solutions",
-                "Content management systems",
-                "Responsive design",
+                "SEO optimization",
+                "Content management",
+                "Performance optimization",
+                "Mobile-first approach",
             ],
+            techStack: "React, Next.js, Tailwind CSS, Node.js",
         },
         {
             id: "dashboard",
-            title: "Dashboard Solutions",
+            title: "Custom Dashboards",
             icon: (isActive) => (
                 <svg
                     className={`w-5 h-5 ${
@@ -60,50 +63,20 @@ const ServicesSection = () => {
                 </svg>
             ),
             description:
-                "Real-time analytics dashboards with customizable reports and data visualization.",
+                "Data-driven dashboards and business intelligence tools that help you make informed decisions with real-time insights.",
             features: [
                 "Real-time analytics",
-                "Custom dashboards",
-                "Data visualization",
-                "Performance metrics",
-                "User management",
+                "Custom data visualization",
+                "Business intelligence",
+                "KPI tracking",
                 "API integrations",
+                "User management",
             ],
-        },
-        {
-            id: "mobile",
-            title: "App Development",
-            icon: (isActive) => (
-                <svg
-                    className={`w-5 h-5 ${
-                        isActive ? "text-white" : "text-gray-700"
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z"
-                    />
-                </svg>
-            ),
-            description:
-                "Cross-platform mobile applications for tracking workouts, nutrition, and health metrics.",
-            features: [
-                "iOS and Android",
-                "Cross-platform development",
-                "Native performance",
-                "Push notifications",
-                "Offline functionality",
-                "App store deployment",
-            ],
+            techStack: "React, D3.js, Chart.js, Firebase, REST APIs",
         },
         {
             id: "ai",
-            title: "AI Solutions",
+            title: "AI Web Applications",
             icon: (isActive) => (
                 <svg
                     className={`w-5 h-5 ${
@@ -122,15 +95,48 @@ const ServicesSection = () => {
                 </svg>
             ),
             description:
-                "AI-powered solutions including chatbots, automation, and intelligent data processing.",
+                "AI-powered web applications including chatbots, workflow automation, and intelligent data processing solutions.",
             features: [
-                "Machine learning models",
+                "AI chatbots",
+                "Workflow automation",
                 "Natural language processing",
-                "Computer vision",
                 "Predictive analytics",
-                "Automation workflows",
-                "Custom AI integrations",
+                "Machine learning integration",
+                "Process optimization",
             ],
+            techStack: "OpenAI API, TensorFlow, Python, Node.js, WebSockets",
+        },
+        {
+            id: "uiux",
+            title: "UI/UX Design",
+            icon: (isActive) => (
+                <svg
+                    className={`w-5 h-5 ${
+                        isActive ? "text-white" : "text-gray-700"
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                    />
+                </svg>
+            ),
+            description:
+                "User-centered design that combines beautiful aesthetics with intuitive functionality to create exceptional user experiences.",
+            features: [
+                "User research & personas",
+                "Wireframing & prototyping",
+                "Visual design systems",
+                "Usability testing",
+                "Brand identity",
+                "Design system creation",
+            ],
+            techStack: "Figma, Adobe Creative Suite, Principle, InVision",
         },
     ];
 
@@ -253,6 +259,18 @@ const ServicesSection = () => {
                         <p className="text-gray-600 text-lg leading-relaxed">
                             {activeServiceData.description}
                         </p>
+
+                        {/* Tech Stack */}
+                        {activeServiceData.techStack && (
+                            <div className="bg-gray-50 rounded-lg p-4">
+                                <h4 className="font-semibold text-gray-900 mb-2">
+                                    Tech Stack:
+                                </h4>
+                                <p className="text-gray-600 text-sm">
+                                    {activeServiceData.techStack}
+                                </p>
+                            </div>
+                        )}
 
                         {/* Features List */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -91,15 +91,15 @@ const AboutSection = () => {
                 {/* Header */}
                 <div className="text-center mb-16">
                     <p className="about-title text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                        ABOUT US
+                        WHY WORK WITH US
                     </p>
                     <h2 className="about-title text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
-                        Your Trusted Digital Partner
+                        Your Agile Digital Partners
                     </h2>
                     <p className="about-content mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                        We're a team of passionate developers, designers, and
-                        strategists dedicated to helping businesses succeed
-                        online.
+                        We're a focused 2-person team that delivers high-quality
+                        digital solutions with direct communication, fast
+                        turnaround, and affordable rates.
                     </p>
                 </div>
 
@@ -133,15 +133,14 @@ const AboutSection = () => {
                     {/* Right Content */}
                     <div className="about-content space-y-8">
                         <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-                            Why Choose Us
+                            Why Choose Our Team
                         </h3>
 
                         <p className="text-gray-600 leading-relaxed">
-                            Since our founding in 2013, we've helped hundreds of
-                            businesses transform their digital presence. Our
-                            approach combines technical expertise with strategic
-                            thinking to deliver solutions that not only look
-                            great but also drive real business results.
+                            As a lean 2-person agency, we offer the perfect
+                            balance of expertise and agility. You'll work
+                            directly with the people building your project - no
+                            middlemen, no miscommunication, just results.
                         </p>
 
                         {/* Features Grid */}
@@ -162,8 +161,12 @@ const AboutSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-900">
-                                        10+ years of industry experience
+                                        Direct Communication
                                     </h4>
+                                    <p className="text-sm text-gray-600">
+                                        Work directly with your developer &
+                                        designer
+                                    </p>
                                 </div>
                             </div>
 
@@ -183,8 +186,12 @@ const AboutSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-900">
-                                        100% client satisfaction guarantee
+                                        Agile Development
                                     </h4>
+                                    <p className="text-sm text-gray-600">
+                                        Fast iterations and quick decision
+                                        making
+                                    </p>
                                 </div>
                             </div>
 
@@ -204,9 +211,11 @@ const AboutSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-900">
-                                        Dedicated project managers for every
-                                        project
+                                        Affordable Rates
                                     </h4>
+                                    <p className="text-sm text-gray-600">
+                                        Premium quality without agency overhead
+                                    </p>
                                 </div>
                             </div>
 
@@ -226,8 +235,11 @@ const AboutSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-900">
-                                        Transparent communication and pricing
+                                        Quality Focus
                                     </h4>
+                                    <p className="text-sm text-gray-600">
+                                        Every project gets our full attention
+                                    </p>
                                 </div>
                             </div>
 
@@ -247,8 +259,12 @@ const AboutSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-900">
-                                        Ongoing support and maintenance
+                                        Modern Tech Stack
                                     </h4>
+                                    <p className="text-sm text-gray-600">
+                                        React, Next.js, Tailwind, and latest
+                                        tools
+                                    </p>
                                 </div>
                             </div>
 

@@ -58,15 +58,38 @@ const HeroSection = () => {
                     {/* Left Content */}
                     <div className="space-y-8">
                         <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                            Transform Your Digital Presence
+                            Smart Websites & Digital Solutions for Modern
+                            Businesses
                         </h1>
 
                         <p className="hero-subtitle text-lg md:text-xl text-gray-600 leading-relaxed">
-                            We build cutting-edge websites, powerful dashboards,
-                            and innovative applications that help businesses
-                            thrive in the digital landscape. Our solutions are
-                            tailored to your unique needs and goals.
+                            We're a focused 2-person team specializing in custom
+                            websites, data-driven dashboards, and AI-powered web
+                            applications. Direct communication, agile
+                            development, and affordable rates.
                         </p>
+
+                        {/* Quick Service Overview */}
+                        <div className="hero-services grid grid-cols-1 sm:grid-cols-3 gap-4 py-4">
+                            <div className="flex items-center space-x-2 text-gray-700">
+                                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                <span className="text-sm font-medium">
+                                    Web Design & Development
+                                </span>
+                            </div>
+                            <div className="flex items-center space-x-2 text-gray-700">
+                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                                <span className="text-sm font-medium">
+                                    Custom Dashboards
+                                </span>
+                            </div>
+                            <div className="flex items-center space-x-2 text-gray-700">
+                                <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                                <span className="text-sm font-medium">
+                                    AI Web Apps
+                                </span>
+                            </div>
+                        </div>
 
                         {/* Buttons */}
                         <div className="hero-buttons flex flex-col sm:flex-row gap-4">
@@ -74,7 +97,7 @@ const HeroSection = () => {
                                 onClick={scrollToContact}
                                 className="bg-gray-900 text-white px-8 py-4 rounded-lg font-medium hover:bg-gray-800 transition-colors flex items-center justify-center group"
                             >
-                                Get Free Consultation
+                                Let's Talk
                                 <svg
                                     className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"
                                     fill="none"
@@ -94,7 +117,7 @@ const HeroSection = () => {
                                 onClick={scrollToPortfolio}
                                 className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-medium hover:bg-gray-50 transition-colors"
                             >
-                                View Our Work
+                                Get a Quote
                             </button>
                         </div>
 

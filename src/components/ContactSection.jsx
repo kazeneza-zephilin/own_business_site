@@ -6,10 +6,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ContactSection = () => {
     const [formData, setFormData] = useState({
-        fullName: "",
+        name: "",
         email: "",
-        phone: "",
-        service: "",
         message: "",
     });
 
@@ -90,10 +88,8 @@ const ContactSection = () => {
         console.log("Form submitted:", formData);
         // Reset form
         setFormData({
-            fullName: "",
+            name: "",
             email: "",
-            phone: "",
-            service: "",
             message: "",
         });
     };
@@ -123,97 +119,42 @@ const ContactSection = () => {
                         </h3>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label
-                                        htmlFor="fullName"
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                    >
-                                        Full Name
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="fullName"
-                                        name="fullName"
-                                        value={formData.fullName}
-                                        onChange={handleInputChange}
-                                        placeholder="John Doe"
-                                        required
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors"
-                                    />
-                                </div>
-
-                                <div>
-                                    <label
-                                        htmlFor="email"
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                    >
-                                        Email Address
-                                    </label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleInputChange}
-                                        placeholder="john@example.com"
-                                        required
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors"
-                                    />
-                                </div>
+                            <div>
+                                <label
+                                    htmlFor="name"
+                                    className="block text-sm font-medium text-gray-700 mb-2"
+                                >
+                                    Name
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleInputChange}
+                                    placeholder="Your name"
+                                    required
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors"
+                                />
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label
-                                        htmlFor="phone"
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                    >
-                                        Phone Number
-                                    </label>
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleInputChange}
-                                        placeholder="+1 (555) 000-0000"
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors"
-                                    />
-                                </div>
-
-                                <div>
-                                    <label
-                                        htmlFor="service"
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                    >
-                                        Service Interested In
-                                    </label>
-                                    <select
-                                        id="service"
-                                        name="service"
-                                        value={formData.service}
-                                        onChange={handleInputChange}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors"
-                                    >
-                                        <option value="">
-                                            Select a service
-                                        </option>
-                                        <option value="Website Development">
-                                            Website Development
-                                        </option>
-                                        <option value="Dashboard Solutions">
-                                            Dashboard Solutions
-                                        </option>
-                                        <option value="Mobile App Development">
-                                            Mobile App Development
-                                        </option>
-                                        <option value="AI Solutions">
-                                            AI Solutions
-                                        </option>
-                                        <option value="Other">Other</option>
-                                    </select>
-                                </div>
+                            <div>
+                                <label
+                                    htmlFor="email"
+                                    className="block text-sm font-medium text-gray-700 mb-2"
+                                >
+                                    Email
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleInputChange}
+                                    placeholder="your@email.com"
+                                    required
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors"
+                                />
                             </div>
 
                             <div>
@@ -221,7 +162,7 @@ const ContactSection = () => {
                                     htmlFor="message"
                                     className="block text-sm font-medium text-gray-700 mb-2"
                                 >
-                                    Your Message
+                                    Message
                                 </label>
                                 <textarea
                                     id="message"
@@ -321,16 +262,16 @@ const ContactSection = () => {
                                     <h4 className="font-semibold text-gray-900 mb-1">
                                         Email Us
                                     </h4>
-                                    <p className="text-gray-600">
-                                        info@techcraft.com
-                                    </p>
-                                    <p className="text-gray-600">
-                                        support@techcraft.com
-                                    </p>
+                                    <a
+                                        href="mailto:hello@digitalagency.com"
+                                        className="text-blue-600 hover:text-blue-700"
+                                    >
+                                        hello@digitalagency.com
+                                    </a>
                                 </div>
                             </div>
 
-                            {/* Phone */}
+                            {/* Schedule Call */}
                             <div className="flex items-start space-x-4">
                                 <div className="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
                                     <svg
@@ -343,24 +284,27 @@ const ContactSection = () => {
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
                                             strokeWidth={2}
-                                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                                         />
                                     </svg>
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-900 mb-1">
-                                        Call Us
+                                        Schedule a Call
                                     </h4>
-                                    <p className="text-gray-600">
-                                        +1 (555) 123-4567
-                                    </p>
-                                    <p className="text-gray-600">
-                                        +1 (555) 987-6543
+                                    <a
+                                        href="#calendly"
+                                        className="text-blue-600 hover:text-blue-700"
+                                    >
+                                        Book a free consultation
+                                    </a>
+                                    <p className="text-sm text-gray-500 mt-1">
+                                        (Calendly link coming soon)
                                     </p>
                                 </div>
                             </div>
 
-                            {/* Business Hours */}
+                            {/* Response Time */}
                             <div className="flex items-start space-x-4">
                                 <div className="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
                                     <svg
@@ -379,13 +323,13 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-900 mb-1">
-                                        Business Hours
+                                        Response Time
                                     </h4>
                                     <p className="text-gray-600">
-                                        Monday - Friday: 9:00 AM - 6:00 PM
+                                        Usually within 2-4 hours
                                     </p>
                                     <p className="text-gray-600">
-                                        Saturday: 10:00 AM - 2:00 PM
+                                        Same day response guaranteed
                                     </p>
                                 </div>
                             </div>

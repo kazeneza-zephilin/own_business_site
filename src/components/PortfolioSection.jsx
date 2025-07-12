@@ -7,74 +7,44 @@ gsap.registerPlugin(ScrollTrigger);
 const PortfolioSection = () => {
     const [activeFilter, setActiveFilter] = useState("All Projects");
 
-    const filters = [
-        "All Projects",
-        "Websites",
-        "Dashboards",
-        "Mobile Apps",
-        "AI Solutions",
-    ];
+    const filters = ["All Projects", "Websites", "Dashboards", "AI Solutions"];
 
     const projects = [
         {
             id: 1,
-            title: "E-commerce Platform",
-            category: "Websites",
-            client: "FashionHub",
+            title: "AI-Powered Analytics Dashboard",
+            category: "Dashboards",
+            client: "DataTech Solutions",
             description:
-                "A modern e-commerce platform with advanced filtering, payment integration, and inventory management.",
-            image: "ecommerce",
-            tags: ["React", "Node.js", "MongoDB"],
+                "Custom business intelligence dashboard with real-time data visualization, predictive analytics, and automated reporting for a fast-growing SaaS company.",
+            image: "dashboard",
+            tags: ["React", "D3.js", "Node.js", "MongoDB"],
+            outcome:
+                "40% improvement in data-driven decision making, reduced reporting time by 60%",
         },
         {
             id: 2,
-            title: "Sales Analytics Dashboard",
-            category: "Dashboards",
-            client: "GlobalTrade Inc.",
+            title: "E-commerce Platform with AI Recommendations",
+            category: "Websites",
+            client: "RetailFlow",
             description:
-                "Real-time sales analytics dashboard with customizable reports and data visualization.",
-            image: "analytics",
-            tags: ["React", "D3.js", "Python"],
+                "Modern e-commerce platform featuring AI-powered product recommendations, advanced search, and seamless checkout experience.",
+            image: "ecommerce",
+            tags: ["Next.js", "Tailwind CSS", "OpenAI API", "Stripe"],
+            outcome:
+                "25% increase in conversion rate, 35% boost in average order value",
         },
         {
             id: 3,
-            title: "Fitness Tracking App",
-            category: "Mobile Apps",
-            client: "FitLife",
-            description:
-                "Cross-platform mobile application for tracking workouts, nutrition, and health metrics.",
-            image: "fitness",
-            tags: ["React Native", "Firebase", "Redux"],
-        },
-        {
-            id: 4,
-            title: "Customer Support Chatbot",
+            title: "Restaurant Management Suite",
             category: "AI Solutions",
-            client: "TechSupport Co.",
+            client: "Bistro Chain",
             description:
-                "AI-powered chatbot that handles customer inquiries and provides instant support 24/7.",
-            image: "chatbot",
-            tags: ["Python", "TensorFlow", "NLP"],
-        },
-        {
-            id: 5,
-            title: "Corporate Website Redesign",
-            category: "Websites",
-            client: "InnovateX",
-            description:
-                "Complete redesign of corporate website with improved UX, performance, and content management.",
-            image: "corporate",
-            tags: ["Next.js", "Tailwind", "Strapi"],
-        },
-        {
-            id: 6,
-            title: "Inventory Management System",
-            category: "Dashboards",
-            client: "LogisticsPro",
-            description:
-                "Comprehensive inventory management system with barcode scanning and predictive ordering.",
-            image: "inventory",
-            tags: ["Vue.js", "Laravel", "MySQL"],
+                "Complete restaurant management system with AI chatbot for orders, inventory prediction, and customer service automation.",
+            image: "restaurant",
+            tags: ["React", "Firebase", "OpenAI", "Twilio"],
+            outcome:
+                "50% reduction in order errors, 30% improvement in customer satisfaction",
         },
     ];
 
@@ -229,16 +199,33 @@ const PortfolioSection = () => {
                                     {project.description}
                                 </p>
 
-                                {/* Tags */}
-                                <div className="flex flex-wrap gap-2">
-                                    {project.tags.map((tag, index) => (
-                                        <span
-                                            key={index}
-                                            className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full"
-                                        >
-                                            {tag}
-                                        </span>
-                                    ))}
+                                {/* Outcome */}
+                                {project.outcome && (
+                                    <div className="mb-4 p-3 bg-green-50 rounded-lg border-l-4 border-green-400">
+                                        <p className="text-sm text-green-800 font-medium">
+                                            <span className="text-green-600">
+                                                Outcome:
+                                            </span>{" "}
+                                            {project.outcome}
+                                        </p>
+                                    </div>
+                                )}
+
+                                {/* Tech Stack */}
+                                <div className="mb-4">
+                                    <h4 className="text-sm font-semibold text-gray-900 mb-2">
+                                        Tech Stack:
+                                    </h4>
+                                    <div className="flex flex-wrap gap-2">
+                                        {project.tags.map((tag, index) => (
+                                            <span
+                                                key={index}
+                                                className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full"
+                                            >
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </div>
